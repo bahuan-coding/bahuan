@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andresilva.dev/sitemap.xml
+Sitemap: https://bahuan.dev/sitemap.xml
