@@ -17,10 +17,10 @@ export const pt: Translations = {
   // ── Hero ─────────────────────────────────────────────────────────────
   hero: {
     badge: "DISPONÍVEL PARA NOVAS OPORTUNIDADES",
-    title1: "ENGENHEIRO",
-    title2: "QUANTITATIVO",
+    title1: "PILOTO",
+    title2: "DE IA",
     subtitle:
-      "CTO hands-on & Executivo C-Level com 17 anos entre",
+      "CTO hands-on que orquestra agentes de IA e swarms autônomos com 17 anos entre",
     subtitleHighlight1: "mesas de trading de alta frequência",
     subtitleAnd: "e",
     subtitleHighlight2: "fintechs de alto crescimento",
