@@ -41,7 +41,7 @@ export default function HeroSection() {
       {/* Sticky Header */}
       <header className="relative border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2 font-mono font-bold text-xl tracking-tighter">
+          <div className="flex items-center gap-2 font-mono font-bold text-xl tracking-tighter shrink-0">
             <Terminal className="h-5 w-5 text-primary" />
             <span>
               ANDRE_SILVA
@@ -50,7 +50,7 @@ export default function HeroSection() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-5 text-sm font-medium text-muted-foreground">
             {NAV_ITEMS.map((item) => (
               <a key={item.href} href={item.href} className="hover:text-primary transition-colors">
                 {item.label}
@@ -82,7 +82,7 @@ export default function HeroSection() {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a href="/Andre_Silva_CV_2026_PT.pdf" download className="flex items-center gap-2">
+                  <a href="/Andre_Silva_Curriculo_2026_Final.pdf" download className="flex items-center gap-2">
                     <svg viewBox="0 0 512 512" className="h-4 w-4 rounded-full shrink-0">
                       <rect width="512" height="512" fill="#009c3b" />
                       <polygon points="256,68 488,256 256,444 24,256" fill="#ffdf00" />
@@ -99,7 +99,7 @@ export default function HeroSection() {
           </nav>
 
           {/* Mobile hamburger */}
-          <div className="md:hidden flex items-center gap-3">
+          <div className="lg:hidden flex items-center gap-3">
             <LanguageSwitcher />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -113,7 +113,7 @@ export default function HeroSection() {
 
         {/* Mobile drawer */}
         {mobileOpen && (
-          <nav className="md:hidden border-t border-border/40 bg-background/98 backdrop-blur px-4 py-4 space-y-1">
+          <nav className="lg:hidden border-t border-border/40 bg-background/98 backdrop-blur px-4 py-4 space-y-1">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
@@ -134,7 +134,7 @@ export default function HeroSection() {
               English CV
             </a>
             <a
-              href="/Andre_Silva_CV_2026_PT.pdf"
+              href="/Andre_Silva_Curriculo_2026_Final.pdf"
               download
               onClick={() => setMobileOpen(false)}
               className="block py-2.5 text-sm font-medium text-primary"
