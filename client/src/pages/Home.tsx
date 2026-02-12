@@ -4,6 +4,7 @@ import FullStorySection from "@/components/sections/FullStorySection";
 import CareerTimeline from "@/components/sections/CareerTimeline";
 import StrategiesShowcase from "@/components/sections/StrategiesShowcase";
 import TechArsenal from "@/components/sections/TechArsenal";
+import RecentProjectsSection from "@/components/sections/RecentProjectsSection";
 import AboutSection from "@/components/sections/AboutSection";
 import LeadershipSection from "@/components/sections/LeadershipSection";
 import VibeCodingSection from "@/components/sections/VibeCodingSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <CareerTimeline />
       <StrategiesShowcase />
       <TechArsenal />
+      <RecentProjectsSection />
 
       <main className="container py-12 md:py-24 space-y-24">
         <AboutSection />

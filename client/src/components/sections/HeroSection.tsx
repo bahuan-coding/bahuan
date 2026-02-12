@@ -55,6 +55,12 @@ export default function HeroSection() {
               TECH_ARSENAL
             </a>
             <a
+              href="#recent-projects"
+              className="hover:text-primary transition-colors"
+            >
+              RECENT_BUILDS
+            </a>
+            <a
               href="#about-me"
               className="hover:text-primary transition-colors"
             >
@@ -119,8 +125,9 @@ export default function HeroSection() {
                 size="lg"
                 variant="outline"
                 className="font-mono text-base h-12 px-8 rounded-none border-border hover:bg-accent"
+                asChild
               >
-                VIEW_PROJECTS
+                <a href="#recent-projects">VIEW_PROJECTS</a>
               </Button>
             </div>
 
