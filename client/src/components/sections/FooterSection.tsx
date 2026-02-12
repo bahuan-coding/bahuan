@@ -1,4 +1,5 @@
 import { Terminal, Github, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const companies = [
   "a55 Payments",
@@ -12,6 +13,8 @@ const companies = [
 ];
 
 export default function FooterSection() {
+  const { t } = useLanguage();
+
   return (
     <footer className="border-t border-border/50 pt-12 pb-8 space-y-8">
       {/* Company Logo Bar */}
@@ -35,7 +38,7 @@ export default function FooterSection() {
 
         <div className="flex flex-col items-center md:items-end gap-3">
           <div className="text-sm text-muted-foreground font-mono text-center md:text-right">
-            <p>São Paulo, Brazil &bull; Remote Available</p>
+            <p>{t.footer.location} &bull; {t.footer.remote}</p>
             <p>
               <a href="mailto:alsilva86@gmail.com" className="hover:text-primary transition-colors">
                 alsilva86@gmail.com
