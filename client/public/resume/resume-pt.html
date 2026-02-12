@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>André Luiz Silva — CTO & Arquiteto Quantitativo</title>
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 210mm;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 62mm 1fr;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 22mm 5mm 10mm 5mm;
+    display: flex;
+    flex-direction: column;
+    gap: 5mm;
+  }
+  .sidebar h3 {
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: #d4a843;
+    border-bottom: 0.5px solid #334155;
+    padding-bottom: 2mm;
+    margin-bottom: 2mm;
+  }
+  .sidebar p, .sidebar li {
+    font-size: 8pt;
+    color: #cbd5e1;
+    line-height: 1.5;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar ul li {
+    padding: 0.8mm 0;
+    padding-left: 3mm;
+    position: relative;
+  }
+  .sidebar ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #d4a843;
+    font-weight: 700;
+  }
+  .contact-item {
+    font-size: 7.8pt;
+    color: #94a3b8;
+    margin-bottom: 1.2mm;
+    word-break: break-all;
+  }
+  .contact-item strong {
+    display: block;
+    color: #e2e8f0;
+    font-size: 7.5pt;
+    margin-bottom: 0.3mm;
+  }
+  .sidebar a {
+    color: #d4a843;
+    text-decoration: none;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    padding: 10mm 8mm 8mm 7mm;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 4mm;
+  }
+  .header h1 {
+    font-size: 20pt;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .header h2 {
+    font-size: 9.5pt;
+    font-weight: 400;
+    color: #64748b;
+    margin-top: 1.5mm;
+    letter-spacing: 0.3px;
+  }
+
+  /* Metrics bar */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2mm;
+    background: #f8fafc;
+    border: 0.5px solid #e2e8f0;
+    border-radius: 2mm;
+    padding: 3mm 2.5mm;
+    margin-bottom: 4.5mm;
+  }
+  .metric {
+    text-align: center;
+  }
+  .metric .value {
+    font-size: 13pt;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+  }
+  .metric .label {
+    font-size: 6.5pt;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.5mm;
+  }
+
+  /* Summary */
+  .summary {
+    font-size: 8.5pt;
+    color: #334155;
+    line-height: 1.55;
+    margin-bottom: 4.5mm;
+    border-left: 2px solid #d4a843;
+    padding-left: 3mm;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0f172a;
+    font-weight: 700;
+    border-bottom: 1.5px solid #0f172a;
+    padding-bottom: 1mm;
+    margin-bottom: 3mm;
+    margin-top: 1mm;
+  }
+
+  /* Job entry */
+  .job {
+    margin-bottom: 3.5mm;
+    page-break-inside: avoid;
+  }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8mm;
+  }
+  .job-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .job-period {
+    font-size: 7.5pt;
+    color: #64748b;
+    white-space: nowrap;
+  }
+  .job-company {
+    font-size: 8pt;
+    color: #475569;
+    margin-bottom: 1mm;
+  }
+  .job-company span {
+    color: #94a3b8;
+  }
+  .job ul {
+    list-style: none;
+    padding: 0;
+  }
+  .job ul li {
+    font-size: 8.2pt;
+    color: #334155;
+    padding-left: 3.5mm;
+    position: relative;
+    margin-bottom: 0.6mm;
+    line-height: 1.45;
+  }
+  .job ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #d4a843;
+    font-size: 7pt;
+    top: 0.3mm;
+  }
+  .job ul li strong {
+    color: #0f172a;
+  }
+
+  /* Tech grid */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5mm 4mm;
+  }
+  .tech-cat {
+    margin-bottom: 1mm;
+  }
+  .tech-cat strong {
+    font-size: 7.5pt;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tech-cat span {
+    font-size: 7.8pt;
+    color: #475569;
+  }
+
+  /* Page 2 sidebar adjustments */
+  .page:nth-child(2) .sidebar {
+    padding-top: 10mm;
+  }
+
+  /* Earlier career compact */
+  .job-compact {
+    margin-bottom: 2.5mm;
+  }
+  .job-compact .job-header {
+    margin-bottom: 0.3mm;
+  }
+  .job-compact .job-title {
+    font-size: 8.8pt;
+  }
+  .job-compact ul li {
+    font-size: 7.8pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════ PÁGINA 1 ════════════════════════════════ -->
+<div class="page">
+  <aside class="sidebar">
+    <div>
+      <h3>Contato</h3>
+      <div class="contact-item">
+        <strong>Localização</strong>
+        São Paulo, Brasil
+      </div>
+      <div class="contact-item">
+        <strong>E-mail</strong>
+        alsilva86@gmail.com
+      </div>
+      <div class="contact-item">
+        <strong>LinkedIn</strong>
+        <a href="https://linkedin.com/in/bahuan">linkedin.com/in/bahuan</a>
+      </div>
+      <div class="contact-item">
+        <strong>Portfólio</strong>
+        <a href="https://bahuan.dev">bahuan.dev</a>
+      </div>
+      <div class="contact-item" style="margin-top:2mm; color:#d4a843; font-size:7.2pt;">
+        ✦ Disponível para remoto e internacional
+      </div>
+    </div>
+
+    <div>
+      <h3>Competências</h3>
+      <ul>
+        <li>Orquestração de Pagamentos</li>
+        <li>Trading de Alta Frequência</li>
+        <li>Finanças Embarcadas</li>
+        <li>Engenharia com Agentes IA</li>
+        <li>Risco de Crédito & Scoring</li>
+        <li>DeFi & Tokenização</li>
+        <li>Conformidade Regulatória</li>
+        <li>Escalação de Times (3→110+)</li>
+        <li>Captação de Recursos ($44M)</li>
+        <li>Expansão Internacional</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Idiomas</h3>
+      <ul>
+        <li>Português — Nativo</li>
+        <li>Inglês — Fluente</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Formação</h3>
+      <p style="font-size:7.5pt; color:#94a3b8; line-height:1.5;">
+        Programa autodirigido de nível executivo em Finanças Quantitativas, Sistemas Distribuídos e Inteligência Artificial. 17+ anos de P&D aplicado em mercado financeiro e tecnologia.
+      </p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="header">
+      <h1>André Luiz Silva</h1>
+      <h2>Diretor de Tecnologia · Arquiteto Quantitativo · Executivo de Fintech</h2>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="value">R$500M+</div>
+        <div class="label">Processados</div>
+      </div>
+      <div class="metric">
+        <div class="value">$44M</div>
+        <div class="label">Captados (A+B)</div>
+      </div>
+      <div class="metric">
+        <div class="value">110+</div>
+        <div class="label">Engenheiros</div>
+      </div>
+      <div class="metric">
+        <div class="value">17+</div>
+        <div class="label">Anos em Finanças</div>
+      </div>
+    </div>
+
+    <div class="summary">
+      CTO & Cofundador que conecta sistemas de Trading de Alta Frequência com Fintech em escala. Construiu e escalou plataformas financeiras processando R$500M+ em transações, captou $44M em capital de risco e foi pioneiro em desenvolvimento acelerado por IA ("Agent Engineering") para entregar infraestrutura de pagamentos e crédito em toda a América Latina.
+    </div>
+
+    <div class="section-title">Experiência Profissional</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Diretor de Tecnologia (CTO)</span>
+        <span class="job-period">Jan 2024 – Atual</span>
+      </div>
+      <div class="job-company">a55 Payments <span>· São Paulo, Brasil</span></div>
+      <ul>
+        <li>Liderou o pivô estratégico de crédito para pagamentos, lançando uma <strong>Plataforma de Orquestração de Pagamentos</strong> com múltiplos adquirentes e roteamento otimizado de transações</li>
+        <li>Pioneiro na metodologia <strong>Agent Engineering</strong> — enxames de agentes IA para geração de código e auditoria automatizada — alcançando <strong>redução de 70% no time-to-market</strong></li>
+        <li>Arquitetou gateway de alta vazão com <strong>split-payments para marketplaces</strong> e conformidade PCI-DSS Nível 1</li>
+        <li>Construiu infraestrutura completa de pagamentos: <strong>75 migrações de banco em 28 domínios DDD</strong>, livro-razão de partidas dobradas, deduplicação de webhooks e fallback multi-provedor</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Cofundador & Diretor de Tecnologia (CTO)</span>
+        <span class="job-period">Jan 2019 – Dez 2023</span>
+      </div>
+      <div class="job-company">a55 Credit <span>· São Paulo & Cidade do México</span></div>
+      <ul>
+        <li>Cofundou e escalou a área de tecnologia de <strong>3 para 110+ engenheiros</strong>, viabilizando <strong>R$500M+ em crédito</strong> para 20.000+ empresas no Brasil e México</li>
+        <li>Liderança técnica na captação de <strong>$44M USD</strong> (Séries A e B) com Santander InnoVentures, Movile e VCs de primeiro nível</li>
+        <li>Lançou a <strong>primeira operação de dívida integrada a DeFi da América Latina</strong>, tokenizando ativos de crédito para acessar pools de liquidez globais via Centrifuge Protocol</li>
+        <li>Manteve inadimplência <strong>abaixo de 2%</strong> com modelos proprietários de credit scoring baseados em IA e dados de receita em tempo real</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Diretor de Tecnologia (CTO)</span>
+        <span class="job-period">Mar 2016 – Dez 2018</span>
+      </div>
+      <div class="job-company">Captalys <span>· São Paulo, Brasil</span></div>
+      <ul>
+        <li>Arquitetou o primeiro <strong>ecossistema de APIs "Lending-as-a-Service"</strong> do Brasil, permitindo que ERPs e marketplaces oferecessem produtos de crédito embarcados — pioneiro em Finanças Embarcadas no país</li>
+        <li>Construiu sistema de gestão de FIDC automatizando cálculo de PL, cessão de recebíveis e cronograma de amortização integrado ao <strong>Banco Central do Brasil</strong></li>
+      </ul>
+    </div>
+
+  </main>
+</div>
+
+<!-- ════════════════════════════════ PÁGINA 2 ════════════════════════════════ -->
+<div class="page">
+  <aside class="sidebar">
+    <div>
+      <h3>Arsenal Técnico</h3>
+      <ul>
+        <li>Rust · Python · TypeScript</li>
+        <li>C++ · Go · Java · Solidity</li>
+        <li>FIX Protocol (4.2/4.4/5.0)</li>
+        <li>ISO 8583 · FAST · ITCH</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Cloud & Infraestrutura</h3>
+      <ul>
+        <li>AWS (ECS/Lambda/Cognito)</li>
+        <li>Kubernetes · Docker</li>
+        <li>Terraform · IaC</li>
+        <li>PostgreSQL · Redis</li>
+        <li>TimescaleDB · Kafka</li>
+        <li>CI/CD · Sentry · Datadog</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>IA & Dados</h3>
+      <ul>
+        <li>Orquestração de LLMs</li>
+        <li>Agentes IA Multi-Persona</li>
+        <li>ML para Credit Scoring</li>
+        <li>Explicabilidade (SHAP)</li>
+        <li>Agentic / Vibe Coding</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Protocolos Financeiros</h3>
+      <ul>
+        <li>PIX / Boleto / Cartões</li>
+        <li>B3 DMA Gateway</li>
+        <li>APIs BACEN / CVM</li>
+        <li>Circle API / USDC</li>
+        <li>NFS-e / NF-e (SERPRO)</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Blockchain</h3>
+      <ul>
+        <li>Smart Contracts (Solidity)</li>
+        <li>Protocolos DeFi</li>
+        <li>Tokenização de Ativos</li>
+        <li>Remessas em USDC</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="section-title">Carreira Anterior</div>
+
+    <div class="job job-compact">
+      <div class="job-header">
+        <span class="job-title">Sócio & Consultor</span>
+        <span class="job-period">2015 – 2016</span>
+      </div>
+      <div class="job-company">Infinity Asset Management <span>· São Paulo</span></div>
+      <ul>
+        <li>Desenvolveu sistemas de execução para <strong>spreads de DI Futuro</strong> com análise de sensibilidade DV01 em tempo real para gestão de risco de juros</li>
+        <li>Construiu motores de precificação multi-ativos com visibilidade intraday de P&L para gestores de carteira</li>
+      </ul>
+    </div>
+
+    <div class="job job-compact">
+      <div class="job-header">
+        <span class="job-title">Trader Proprietário</span>
+        <span class="job-period">Set 2013 – Jun 2015</span>
+      </div>
+      <div class="job-company">Infestus Capital <span>· São Paulo</span></div>
+      <ul>
+        <li>Operou servidores HFT colocados na <strong>B3</strong> (Equinix SP4), otimizando código C++ e Prolog para <strong>execução em microssegundos</strong></li>
+        <li>Executou estratégias de Odd Lot Arbitrage, Penny Jumping, Box Spread e ADR Arbitrage com feed handlers FPGA e kernel-bypass</li>
+      </ul>
+    </div>
+
+    <div class="job job-compact">
+      <div class="job-header">
+        <span class="job-title">Desenvolvedor Quantitativo</span>
+        <span class="job-period">2011 – 2013</span>
+      </div>
+      <div class="job-company">DLM Invista (Interasset) <span>· São Paulo & Belo Horizonte</span></div>
+      <ul>
+        <li>Construiu algoritmos de execução para <strong>estratégias de Box Spread</strong> (arbitragem de 4 pontas em opções) capturando taxas livres de risco</li>
+        <li>Desenvolveu OMS interno e monitores de risco em .NET para fundo com <strong>Sharpe Ratio de 1,8</strong></li>
+      </ul>
+    </div>
+
+    <div class="job job-compact">
+      <div class="job-header">
+        <span class="job-title">Desenvolvedor Quantitativo & Especialista em Trading Eletrônico</span>
+        <span class="job-period">2009 – 2011</span>
+      </div>
+      <div class="job-company">Banco Fator / Fator Securities <span>· Rio de Janeiro & São Paulo</span></div>
+      <ul>
+        <li>Modernizou a mesa de trading eletrônico, elevando o banco do <strong>12º para 4º lugar no ranking de volume de futuros da BMF</strong></li>
+        <li>Pioneiro em trading algorítmico baseado em CEP para estratégias de Cash & Carry e Reversão à Média; construiu sistemas de ADR Arbitrage para a filial de Nova York</li>
+      </ul>
+    </div>
+
+    <div class="job job-compact">
+      <div class="job-header">
+        <span class="job-title">Especialista em Trading Eletrônico</span>
+        <span class="job-period">2008 – 2009</span>
+      </div>
+      <div class="job-company">Link Investimentos <span>· São Paulo (Adquirida pelo UBS)</span></div>
+      <ul>
+        <li>Especialista em FIX Protocol para Acesso Direto ao Mercado (DMA) no maior banco de investimentos do Brasil em volume</li>
+        <li>Suportou mesas de trading eletrônico de alto volume e otimizou sistemas de roteamento institucional de ordens</li>
+      </ul>
+    </div>
+
+    <div class="section-title" style="margin-top:3mm;">Projetos e Resultados</div>
+
+    <div class="tech-grid">
+      <div class="tech-cat">
+        <strong>Pagamentos</strong><br>
+        <span>Gateway completo com fallback multi-provedor, livro-razão de partidas dobradas e 28 domínios DDD. Abertura de conta via WhatsApp com KYC e verificação biométrica.</span>
+      </div>
+      <div class="tech-cat">
+        <strong>IA / ML</strong><br>
+        <span>Motor de risco de crédito com explicabilidade SHAP. Plataforma de agentes conversacionais com detecção de compliance em tempo real (95% de cobertura de testes).</span>
+      </div>
+      <div class="tech-cat">
+        <strong>Corporativo</strong><br>
+        <span>ERP multi-tenant com motor fiscal NFS-e/NF-e (SERPRO mTLS). Infraestrutura de assinatura digital com gestão de certificados A1/A3.</span>
+      </div>
+      <div class="tech-cat">
+        <strong>Dados & Blockchain</strong><br>
+        <span>Pipeline ETL com 24 conectores de dados públicos (SELIC, IPCA, judicial). Serviço de remessas em USDC com criação de carteiras blockchain.</span>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:4mm;">Filosofia de Liderança</div>
+    <div class="summary" style="margin-bottom:0;">
+      CTO mão na massa que revisa PRs, faz pair programming e resolve produção às 3 da manhã. Time principal junto há <strong>10+ anos em 3 empresas consecutivas</strong> (Captalys → a55 Credit → a55 Payments). Escalou de 3 para 110+ profissionais no Brasil e México mantendo 100% de envolvimento técnico. Pioneiro em Agent Engineering — alavancando IA para multiplicar a entrega do time sem perder qualidade.
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
