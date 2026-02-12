@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Netlify
+.netlify/
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+
+# Logs
+*.log
+.manus-logs/
+
+# Debug artifacts
+.webdev/
