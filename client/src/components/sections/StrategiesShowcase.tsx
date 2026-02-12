@@ -326,42 +326,66 @@ const cardVariants = {
 // Component
 // ---------------------------------------------------------------------------
 
+// Signature strategies shown by default (top picks across categories)
+const SIGNATURE_NAMES = new Set([
+  "Market Making",
+  "Latency Arbitrage",
+  "Statistical Arbitrage",
+  "DeFi Tokenization",
+  "Split Payment Orchestration",
+  "Box Spread",
+  "Smart Routing",
+  "Delta Hedging",
+]);
+
 export default function StrategiesShowcase() {
   const [activeFilter, setActiveFilter] = useState<FilterOption>("ALL");
+  const [showAll, setShowAll] = useState(false);
 
   const filtered =
     activeFilter === "ALL"
       ? strategies
       : strategies.filter((s) => s.category === activeFilter);
 
+  const visible =
+    showAll || activeFilter !== "ALL"
+      ? filtered
+      : filtered.filter((s) => SIGNATURE_NAMES.has(s.name));
+
   return (
     <section
       id="strategies"
       className="relative w-full bg-neutral-950 py-24 md:py-32"
     >
-      {/* Subtle top-border glow */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00E676]/40 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* ── Header ───────────────────────────────────────────────────── */}
-        <div className="mb-12 flex items-center gap-3">
+        <div className="mb-4 flex items-center gap-3">
           <TrendingUp className="h-6 w-6 text-[#00E676]" />
           <h2 className="font-mono text-2xl font-bold tracking-tight text-white md:text-3xl">
-            STRATEGY_COMPENDIUM
+            Strategy Expertise
           </h2>
           <span className="ml-auto font-mono text-sm text-neutral-500">
-            {filtered.length}/{strategies.length}
+            {visible.length}/{strategies.length}
           </span>
         </div>
+        <p className="mb-10 max-w-2xl font-sans text-sm leading-relaxed text-neutral-400">
+          {activeFilter === "ALL" && !showAll
+            ? "Signature strategies across 17 years of trading and fintech."
+            : "All strategies filtered by category."}
+        </p>
 
-        {/* ── Filters ──────────────────────────────────────────────────── */}
+        {/* Filters */}
         <div className="mb-10 flex flex-wrap gap-2">
           {FILTER_OPTIONS.map((option) => {
             const isActive = activeFilter === option;
             return (
               <button
                 key={option}
-                onClick={() => setActiveFilter(option)}
+                onClick={() => {
+                  setActiveFilter(option);
+                  if (option !== "ALL") setShowAll(true);
+                }}
                 className={`
                   cursor-pointer rounded-md border px-3 py-1.5 font-mono text-xs font-medium tracking-wide
                   transition-all duration-200
@@ -378,13 +402,13 @@ export default function StrategiesShowcase() {
           })}
         </div>
 
-        {/* ── Grid ─────────────────────────────────────────────────────── */}
+        {/* Grid */}
         <motion.div
           layout
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
           <AnimatePresence mode="popLayout">
-            {filtered.map((strategy) => (
+            {visible.map((strategy) => (
               <motion.div
                 key={strategy.name}
                 variants={cardVariants}
@@ -396,25 +420,18 @@ export default function StrategiesShowcase() {
               >
                 <Card className="group h-full border-neutral-800 bg-neutral-900/80 backdrop-blur-sm transition-colors duration-200 hover:border-neutral-700">
                   <CardContent className="flex h-full flex-col gap-3">
-                    {/* Category badge */}
                     <Badge
                       variant="outline"
                       className={`w-fit font-mono text-[10px] uppercase tracking-widest ${categoryColor[strategy.category]}`}
                     >
                       {strategy.category}
                     </Badge>
-
-                    {/* Strategy name */}
                     <h3 className="font-mono text-sm font-semibold leading-snug text-white">
                       {strategy.name}
                     </h3>
-
-                    {/* Description */}
                     <p className="font-sans text-xs leading-relaxed text-neutral-400">
                       {strategy.description}
                     </p>
-
-                    {/* Tags */}
                     <div className="mt-auto flex flex-wrap gap-1.5 pt-2">
                       {strategy.tags.map((tag) => (
                         <Badge
@@ -432,6 +449,28 @@ export default function StrategiesShowcase() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Show all toggle */}
+        {activeFilter === "ALL" && !showAll && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="font-mono text-sm text-[#00E676] hover:text-[#00E676]/80 transition-colors cursor-pointer"
+            >
+              View all {strategies.length} strategies →
+            </button>
+          </div>
+        )}
+        {activeFilter === "ALL" && showAll && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(false)}
+              className="font-mono text-sm text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer"
+            >
+              Show signature strategies only
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

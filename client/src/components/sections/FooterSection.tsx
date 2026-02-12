@@ -1,24 +1,48 @@
 import { Terminal, Github, Linkedin, Mail } from "lucide-react";
 
+const companies = [
+  "a55 Payments",
+  "a55 Credit",
+  "Captalys",
+  "Infinity Asset",
+  "Infestus Capital",
+  "DLM Invista",
+  "Banco Fator",
+  "Link / UBS",
+];
+
 export default function FooterSection() {
   return (
-    <footer className="border-t border-border/50 pt-12 pb-8">
-      {/* Top Row */}
+    <footer className="border-t border-border/50 pt-12 pb-8 space-y-8">
+      {/* Company Logo Bar */}
+      <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        {companies.map((name) => (
+          <span
+            key={name}
+            className="font-mono text-xs text-muted-foreground/60 uppercase tracking-wider"
+          >
+            {name}
+          </span>
+        ))}
+      </div>
+
+      {/* Main row */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-        {/* Branding */}
         <div className="flex items-center gap-2 font-mono font-bold text-lg">
           <Terminal className="h-5 w-5 text-primary" />
           <span>ANDRE_SILVA</span>
         </div>
 
-        {/* Contact & Social Links */}
         <div className="flex flex-col items-center md:items-end gap-3">
           <div className="text-sm text-muted-foreground font-mono text-center md:text-right">
             <p>São Paulo, Brazil &bull; Remote Available</p>
-            <p>alsilva86@gmail.com</p>
+            <p>
+              <a href="mailto:alsilva86@gmail.com" className="hover:text-primary transition-colors">
+                alsilva86@gmail.com
+              </a>
+            </p>
           </div>
 
-          {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/bahuan"
@@ -49,9 +73,8 @@ export default function FooterSection() {
         </div>
       </div>
 
-      {/* Bottom — System Version */}
-      <div className="mt-8 text-center text-xs text-muted-foreground font-mono">
-        SYSTEM_VERSION: 3.0.26 // DEPLOYED_VIA_NETLIFY
+      <div className="text-center text-xs text-muted-foreground font-mono">
+        SYSTEM_VERSION: 3.1.0 // DEPLOYED_VIA_NETLIFY
       </div>
     </footer>
   );

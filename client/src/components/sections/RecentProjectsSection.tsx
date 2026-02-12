@@ -195,31 +195,37 @@ const cardVariants = {
 // Component
 // ---------------------------------------------------------------------------
 
+const FEATURED_COUNT = 6;
+
 export default function RecentProjectsSection() {
   const [activeFilter, setActiveFilter] = useState<FilterOption>("ALL");
+  const [showAll, setShowAll] = useState(false);
 
   const filtered =
     activeFilter === "ALL"
       ? projects
       : projects.filter((p) => p.category === activeFilter);
 
+  const visible =
+    showAll || activeFilter !== "ALL"
+      ? filtered
+      : filtered.slice(0, FEATURED_COUNT);
+
   return (
     <section
       id="recent-projects"
       className="relative w-full bg-neutral-950 py-24 md:py-32"
     >
-      {/* Subtle top-border glow */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00E676]/40 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* ── Header ───────────────────────────────────────────────────── */}
         <div className="mb-4 flex items-center gap-3">
           <Layers className="h-6 w-6 text-[#00E676]" />
           <h2 className="font-mono text-2xl font-bold tracking-tight text-white md:text-3xl">
-            RECENT_BUILDS
+            Recent Projects
           </h2>
           <span className="ml-auto font-mono text-sm text-neutral-500">
-            {filtered.length}/{projects.length}
+            {visible.length}/{projects.length}
           </span>
         </div>
         <p className="mb-12 max-w-2xl font-sans text-sm leading-relaxed text-neutral-400">
@@ -227,14 +233,17 @@ export default function RecentProjectsSection() {
           from payment gateways to AI agents.
         </p>
 
-        {/* ── Filters ──────────────────────────────────────────────────── */}
+        {/* Filters */}
         <div className="mb-10 flex flex-wrap gap-2">
           {FILTER_OPTIONS.map((option) => {
             const isActive = activeFilter === option;
             return (
               <button
                 key={option}
-                onClick={() => setActiveFilter(option)}
+                onClick={() => {
+                  setActiveFilter(option);
+                  if (option !== "ALL") setShowAll(true);
+                }}
                 className={`
                   cursor-pointer rounded-md border px-3 py-1.5 font-mono text-xs font-medium tracking-wide
                   transition-all duration-200
@@ -251,13 +260,13 @@ export default function RecentProjectsSection() {
           })}
         </div>
 
-        {/* ── Grid ─────────────────────────────────────────────────────── */}
+        {/* Grid */}
         <motion.div
           layout
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
           <AnimatePresence mode="popLayout">
-            {filtered.map((project) => (
+            {visible.map((project) => (
               <motion.div
                 key={project.name}
                 variants={cardVariants}
@@ -269,25 +278,18 @@ export default function RecentProjectsSection() {
               >
                 <Card className="group h-full border-neutral-800 bg-neutral-900/80 backdrop-blur-sm transition-colors duration-200 hover:border-neutral-700">
                   <CardContent className="flex h-full flex-col gap-3">
-                    {/* Category badge */}
                     <Badge
                       variant="outline"
                       className={`w-fit font-mono text-[10px] uppercase tracking-widest ${categoryColor[project.category]}`}
                     >
                       {filterLabel[project.category]}
                     </Badge>
-
-                    {/* Project name */}
                     <h3 className="font-mono text-sm font-semibold leading-snug text-white">
                       {project.name}
                     </h3>
-
-                    {/* Description */}
                     <p className="font-sans text-xs leading-relaxed text-neutral-400">
                       {project.description}
                     </p>
-
-                    {/* Tags */}
                     <div className="mt-auto flex flex-wrap gap-1.5 pt-2">
                       {project.tags.map((tag) => (
                         <Badge
@@ -305,6 +307,27 @@ export default function RecentProjectsSection() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {activeFilter === "ALL" && !showAll && filtered.length > FEATURED_COUNT && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="font-mono text-sm text-[#00E676] hover:text-[#00E676]/80 transition-colors cursor-pointer"
+            >
+              View all {projects.length} projects →
+            </button>
+          </div>
+        )}
+        {activeFilter === "ALL" && showAll && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(false)}
+              className="font-mono text-sm text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer"
+            >
+              Show featured projects only
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

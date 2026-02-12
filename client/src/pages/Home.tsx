@@ -6,8 +6,7 @@ import StrategiesShowcase from "@/components/sections/StrategiesShowcase";
 import TechArsenal from "@/components/sections/TechArsenal";
 import RecentProjectsSection from "@/components/sections/RecentProjectsSection";
 import AboutSection from "@/components/sections/AboutSection";
-import LeadershipSection from "@/components/sections/LeadershipSection";
-import VibeCodingSection from "@/components/sections/VibeCodingSection";
+import HowIWorkSection from "@/components/sections/LeadershipSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 export default function Home() {
@@ -15,24 +14,26 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       <HeroSection />
 
-      <main className="container py-12 md:py-24 lg:py-32 space-y-24">
+      {/* Story + Career — standard background */}
+      <section className="container py-16 md:py-24 space-y-20">
         <FullStorySection />
-        <Separator />
-      </main>
+      </section>
 
       <CareerTimeline />
+
+      {/* Dark sections — full bleed */}
       <StrategiesShowcase />
       <TechArsenal />
       <RecentProjectsSection />
 
-      <main className="container py-12 md:py-24 space-y-24">
+      {/* Personal sections — standard background */}
+      <section className="container py-16 md:py-24 space-y-20">
         <AboutSection />
         <Separator />
-        <LeadershipSection />
+        <HowIWorkSection />
         <Separator />
-        <VibeCodingSection />
         <FooterSection />
-      </main>
+      </section>
     </div>
   );
 }
