@@ -28,6 +28,7 @@ const strategies: Strategy[] = [
   { name: "Pairs Trading", category: "ARBITRAGE", description: "Correlated asset divergence/convergence.", tags: ["Cointegration", "Kalman Filter"] },
   { name: "Index Arbitrage", category: "ARBITRAGE", description: "ETF/futures vs underlying basket pricing.", tags: ["CEP", "Real-time"] },
   { name: "Triangular FX Arbitrage", category: "ARBITRAGE", description: "Cross-currency rate discrepancy.", tags: ["FIX", "Multi-venue"] },
+  { name: "Forex Algorithmic Trading", category: "HFT", description: "Automated 15+ currency pairs via MQL5 Expert Advisors on MetaTrader, connected to SaxoBank (Denmark) for institutional FX liquidity.", tags: ["MQL5", "MetaTrader", "SaxoBank", "Forex"] },
   { name: "Forward Rate Arbitrage (FRC/FRO)", category: "ARBITRAGE", description: "DI x USD cupom cambial spread.", tags: ["B3", "Derivatives"] },
   { name: "DI Spread Trading (DDI)", category: "ARBITRAGE", description: "Interest rate differential strategies.", tags: ["DI Futures", "B3"] },
   { name: "Volatility Arbitrage", category: "ARBITRAGE", description: "Options implied vs realized vol trading.", tags: ["Greeks", "Black-Scholes"] },

@@ -42,21 +42,21 @@ export const en = {
       '"My journey is defined by a relentless pursuit of efficiency — first in microseconds on the trading floor, and now in scale and velocity within the fintech ecosystem."',
     milestones: [
       {
-        period: "2008 - 2011",
+        period: "2008 - 2012",
         title: "The High-Frequency Foundation",
         summary:
           "FIX Protocol, DMA, and electronic trading at Link Investimentos (acquired by UBS) and Banco Fator. Elevated futures volume ranking from 12th to 4th on B3.",
         metric: "12th → 4th in B3 futures",
       },
       {
-        period: "2011 - 2016",
+        period: "2012 - 2016",
         title: "The Quant Trader Era",
         summary:
-          "Proprietary trading with C++ blackbox systems running on colocated servers inside B3. FPGA feed handlers, kernel bypass, lock-free data structures.",
+          "Quant development at DLM Invista (now Inter Asset / Banco Inter) followed by proprietary trading at Infestus Capital in PnL-sharing partnership with Infinity Asset Management. C++ blackbox systems on colocated servers at B3, plus 15+ forex pairs automated via MQL5/MetaTrader on the SaxoBank platform.",
         metric: "Microsecond execution",
       },
       {
-        period: "2016 - 2018",
+        period: "2016 - 2019",
         title: "Pioneering Embedded Finance",
         summary:
           "CTO at Captalys — architected Brazil's first Embedded Finance operations. FIDC structuring, ML credit scoring, Central Bank API integration.",
@@ -94,11 +94,11 @@ export const en = {
       'I coordinated my first development team here, sustaining critical Order Management Systems (OMS) like <strong>Bloomberg Tradebook</strong>, <strong>SunGard</strong>, and <strong>Reuters</strong>. We built dashboards in <strong>Java</strong> and <strong>Oracle</strong>, tropicalizing international systems for the Brazilian market. I also worked closely with the <strong>Fator Securities</strong> branch in New York, building systems for <strong>ADR Arbitrage</strong> and statistical models—leveraging <strong>C++</strong> for performance-critical components—that allowed foreign investors to apply mean reversion strategies to Brazilian assets listed on the NYSE.',
     chapter2Title: "The Quant Trader Era",
     chapter2P1:
-      'Driven by a desire to be closer to the P&L, I transitioned to the buy-side at <strong>DLM Invista</strong> and later as a Proprietary Trader at <strong>Infestus Capital</strong>. This was the era of "Blackbox" trading. I wrote <strong>C++</strong> and <strong>Prolog</strong> code that ran on colocated servers inside B3\'s data center, executing <em>Odd Lot Arbitrage</em> and <em>Penny Jumping</em> strategies in microseconds.',
+      'Driven by a desire to be closer to the P&L, I transitioned to the buy-side at <strong>DLM Invista</strong> (now <strong>Inter Asset</strong>, part of Banco Inter\'s digital banking ecosystem) and later as a Proprietary Trader at <strong>Infestus Capital</strong>. At Infestus, I operated through a <strong>PnL-sharing partnership with Infinity Asset Management</strong> — a common arrangement in prop trading where the trader builds and runs algorithmic strategies using the partner firm\'s infrastructure, exchange licenses, and capital, splitting profits based on performance. This was the era of "Blackbox" trading. I wrote <strong>C++</strong> and <strong>Prolog</strong> code that ran on colocated servers inside B3\'s data center, executing <em>Odd Lot Arbitrage</em> and <em>Penny Jumping</em> strategies in microseconds. I was also deeply drawn to learning algorithmic <strong>DI Futures arbitrage</strong> — using algorithms to capture risk-free interest rate differentials across the yield curve on B3, a highly technical discipline requiring real-time DV01 sensitivity analysis and precise spread execution.',
     chapter2P2:
       'The strategy arsenal expanded dramatically: <em>Market Making</em> with continuous bid/ask quoting, <em>Latency Arbitrage</em> exploiting feed delays between venues, <em>Box Spread</em> (4-point risk-neutral options arbitrage), <em>ADR Arbitrage</em> between New York and São Paulo, <em>Delta Hedging</em> for continuous options neutralization, <em>Gamma Scalping</em> to profit from gamma in delta-hedged positions, <em>Volatility Arbitrage</em> trading implied vs realized vol, <em>Statistical Arbitrage</em> on correlated pairs, <em>Momentum Ignition</em> triggering short-term directional moves, <em>Dark Pool Execution</em> for large-block anonymity, <em>Forward Rate Arbitrage (FRC/FRO)</em> on DI x USD cupom cambial spreads, <em>DI Spread Trading (DDI)</em> on interest rate differentials, and <em>Triangular FX Arbitrage</em> across cross-currency rate discrepancies.',
     chapter2P3:
-      'At the infrastructure level, every nanosecond mattered. We deployed <strong>FPGA feed handlers</strong> for hardware-accelerated market data processing, implemented <strong>kernel bypass</strong> networking (DPDK/Solarflare) to eliminate OS overhead, built <strong>lock-free data structures</strong> for contention-free multithreading, and used <strong>UDP multicast</strong> for efficient market data distribution. Every line of code had a direct financial consequence. This period instilled in me a rigorous discipline for risk management and system stability that few CTOs possess.',
+      'At the infrastructure level, every nanosecond mattered. We deployed <strong>FPGA feed handlers</strong> for hardware-accelerated market data processing, implemented <strong>kernel bypass</strong> networking (DPDK/Solarflare) to eliminate OS overhead, built <strong>lock-free data structures</strong> for contention-free multithreading, and used <strong>UDP multicast</strong> for efficient market data distribution. In parallel, I automated <strong>15+ forex currency pairs</strong> using <strong>MQL5 Expert Advisors</strong> on <strong>MetaTrader</strong>, connected to <strong>SaxoBank</strong> (Denmark) — a leading multi-asset trading platform providing institutional-grade FX liquidity. Every line of code had a direct financial consequence. This period instilled in me a rigorous discipline for risk management and system stability that few CTOs possess.',
     chapter3Title: "Pioneering Embedded Finance",
     chapter3P1:
       'Recognizing the shift towards fintech, I joined <strong>Captalys</strong> as CTO. Here, the challenge shifted from speed to complexity. I architected the systems that powered one of Brazil\'s first <strong>Embedded Finance</strong> operations. We built a credit engine capable of managing complex <strong>FIDC</strong> (Fundo de Investimento em Direitos Creditórios) structures, automating the entire lifecycle of <strong>receivables factoring</strong> and anticipation. We didn\'t just lend money; we integrated credit directly into the ERPs and marketplaces where businesses operated.',
@@ -108,7 +108,7 @@ export const en = {
       'Using <strong>Python</strong>, <strong>Node.js</strong>, and <strong>Angular</strong>, we built a system that communicated directly with the Central Bank of Brazil to prevent fraud in receivables. This was my first deep dive into the "Real Economy," moving away from liquid funds to credit rights. It was here that I realized I needed to build larger teams to achieve my vision, marking the start of my journey as a leader of leaders.',
     chapter4Title: "Scaling a Unicorn: The a55 Credit Journey",
     chapter4P1:
-      'In 2019, I co-founded <strong>a55</strong> with a vision to revolutionize lending for the digital economy. As CTO, I built the technology from scratch and scaled it to support over <strong>20,000 companies</strong> and <strong>R$500 million</strong> in financing. We were pioneers, launching Latin America\'s first <strong>DeFi-integrated debt operation</strong>, tokenizing credit assets to tap into global liquidity pools.',
+      'In February 2019, I co-founded <strong>a55</strong> with a vision to revolutionize lending for the digital economy. As CTO, I built the technology from scratch and scaled it to support over <strong>20,000 companies</strong> and <strong>R$500 million</strong> in financing. We were pioneers, launching Latin America\'s first <strong>DeFi-integrated debt operation</strong>, tokenizing credit assets to tap into global liquidity pools.',
     chapter4P2:
       'The DeFi integration was groundbreaking. We implemented <strong>ERC-20</strong> and <strong>ERC-721</strong> token standards for credit asset representation, leveraged the <strong>Centrifuge Protocol</strong> as our tokenization layer, and wrote <strong>Solidity</strong> smart contracts to manage the on-chain lifecycle of debt instruments. This allowed global investors to participate in Brazilian credit markets with unprecedented transparency and settlement efficiency.',
     chapter4P3:
@@ -163,20 +163,15 @@ export const en = {
         metrics: ["Pioneer in Embedded Finance", "Central Bank API integration"],
       },
       {
-        id: "infinity-asset",
+        id: "infestus-infinity",
         summary:
-          "Developed specialized execution systems for DI Futures spreads with DV01 sensitivity analysis and real-time NAV calculation engines.",
-      },
-      {
-        id: "infestus-capital",
-        summary:
-          "High-frequency proprietary trading from colocated servers inside B3's data center. Every line of code had direct P&L consequences.",
-        metrics: ["Microsecond execution", "Risk-neutral strategies", "Direct P&L ownership"],
+          "Proprietary trader operating from colocated servers inside B3's data center (Equinix SP4) through a PnL-sharing partnership with Infinity Asset Management — a common prop trading arrangement where the trader builds and runs algorithmic strategies using the partner firm's infrastructure, licenses, and capital, splitting profits based on performance. Developed HFT systems in C++ and Prolog for microsecond execution, while also building DI Futures algorithmic arbitrage systems for risk-free interest rate capture. Additionally automated 15+ forex pairs via MQL5 Expert Advisors on MetaTrader using the SaxoBank (Denmark) multi-asset platform.",
+        metrics: ["Microsecond execution", "PnL-sharing partnership", "15+ forex pairs automated", "DI Futures algorithmic arbitrage"],
       },
       {
         id: "dlm-invista",
         summary:
-          "Built execution algorithms for Box Spread strategies (risk-neutral options arbitrage) and internal OMS systems on the buy-side.",
+          "Built execution algorithms for Box Spread strategies (risk-neutral options arbitrage) and internal OMS systems on the buy-side. DLM Invista was later acquired by Banco Inter in 2020 and renamed Inter Asset, becoming part of Brazil's largest digital bank ecosystem.",
       },
       {
         id: "banco-fator",
