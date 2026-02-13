@@ -118,9 +118,9 @@ export const pt: Translations = {
     chapter5P1:
       'Quando a crise de crédito global apertou, não recuamos — executamos um pivot. Liderei a transformação da infraestrutura core em <strong>a55 Payments</strong>, uma <strong>Plataforma de Orquestração de Pagamentos</strong> robusta. Não era só um produto novo; era uma reinvenção completa do nosso DNA tecnológico.',
     chapter5P2:
-      'Como CTO da a55 Payments, coloquei a mão na massa para construir um sistema com <strong>Smart Routing</strong> entre múltiplos provedores, <strong>Agregação de Adquirentes</strong> para otimização de taxas, <strong>Split Payments</strong> complexos para disbursement de marketplace e compliance total com <strong>PCI-DSS</strong> para tratamento seguro de dados de cartão. Transformamos nossas capacidades internas em um produto standalone gerador de receita.',
+      'Mas o pivot de pagamentos foi só metade da história. Em paralelo, mergulhei fundo em <strong>Agent Engineering</strong> — não só usando IA pra gerar código, mas arquitetando um <strong>sistema multi-agente de produção</strong> como projeto pessoal. Construí 30 Product Managers de IA especializados por profissão (advogado, médico, barbeiro, desenvolvedor e mais 26), cada um mapeando dores reais em produtos financeiros através de um <strong>PM Suite Coordinator</strong>. Junto deles, um <strong>StudyOrchestrator</strong> executa 8 agentes paralelos de análise de crédito — CreditScore, CompanyProfile, EmploymentDynamics, JudicialHealth, SectorBenchmark, RegionalEconomy, BNDESHistory e Compliance — todos rodando via <strong>asyncio.gather()</strong> com contexto compartilhado pra evitar buscas redundantes. Um <strong>InterpretationEngine</strong> traduz métricas técnicas em linguagem simples que qualquer pessoa entende.',
     chapter5P3:
-      'Para entregar isso com um time mais enxuto, criei uma nova metodologia: <strong>Agent Engineering</strong>. Hoje orquestro swarms de agentes de IA para lidar com tudo — de geração de código a auditoria automatizada. Essa abordagem de <strong>"Vibe Coding"</strong>, combinada com <strong>Rust</strong> para performance e segurança a nível de sistemas, nos permite manter a velocidade de um time de 50 pessoas com uma fração do headcount, alcançando <strong>70% de redução no time-to-market</strong> com confiabilidade enterprise-grade. O futuro não é sobre contratar mais engenheiros — é sobre multiplicar os que você tem com inteligência.',
+      'Isso é o que eu chamo de Agent Engineering como filosofia completa — não é só vibe coding. É arquitetar sistemas onde agentes autônomos geram produtos, analisam crédito e tomam decisões. O sistema inteiro é <strong>WhatsApp-first</strong> com reconhecimento de voz, usa <strong>Gemini pra pricing dinâmico</strong> e <strong>GPT-4 pra fluxos conversacionais</strong>, e roda em orquestração customizada com asyncio puro — <strong>sem framework, sem LangChain, sem CrewAI</strong>. Cada um dos 8 study runners estende um <strong>BaseStudyRunner</strong> com sua própria lógica de coleta e interpretação, enquanto os PM agents fazem mapeamento de dor-pra-produto por profissão. Combinado com <strong>Rust</strong> nos caminhos críticos de performance, essa abordagem entrega a velocidade de um time de 50 com uma fração do headcount — <strong>70% de redução no time-to-market</strong> com confiabilidade enterprise-grade.',
     chapter6Title: "O Ciclo se Fecha: Quant Backtester",
     chapter6P1:
       'Em 2025, tudo se conectou. Canalizei 17 anos de experiência em trading quantitativo para construir um <strong>backtester de nível institucional</strong> em Rust — um workspace de 17 crates com 28 mil linhas de código. O sistema tem um <strong>UnifiedEngine</strong> com aritmética de ponto fixo (i64 com 6 casas decimais), barras dual-price para validação anti-double-count, e um hot path zero-alocação que atinge <strong>speedup de 93x</strong> sobre implementações padrão via layout Structure-of-Arrays (SoA) e vetorização SIMD.',
@@ -148,7 +148,7 @@ export const pt: Translations = {
       {
         id: "a55-payments",
         summary:
-          "Liderando o pivot de crédito para orquestração de pagamentos. Gestão hands-on com swarms de agentes de IA para manter velocidade de entrega com time enxuto.",
+          "Liderando o pivot de crédito para orquestração de pagamentos. Gestão hands-on aplicando metodologia Agent Engineering para acelerar entregas enterprise-grade com time enxuto.",
         metrics: ["70% mais rápido no time-to-market", "Pioneiro em Agent Engineering", "PCI-DSS Level 1"],
       },
       {
@@ -251,16 +251,16 @@ export const pt: Translations = {
     aiQuote: '"Não só escrevo código — eu orquestro inteligência."',
     agentTitle: "Orquestração de Agentes",
     agentDesc:
-      "Swarms de agentes de IA para geração de código, testes automatizados, auditoria de segurança e deploy — tudo coordenado por um arquiteto humano.",
+      "Swarms de agentes de IA — de 30 Product Managers por profissão que mapeiam dores em produtos, a 8 agentes paralelos de análise de crédito com contexto compartilhado. Geração de código, testes automatizados, auditoria de segurança e deploy — tudo coordenado por um arquiteto humano.",
     fasterTitle: "70% Mais Rápido",
     fasterDesc:
-      "Metodologia assistida por IA que acelera entregas mantendo qualidade enterprise-grade. Velocidade de um time de 50 com uma fração do headcount.",
+      "Não é teoria — testado em produção com 30 PM agents por profissão mapeando dores reais em produtos, e 8 agentes paralelos de crédito (CreditScore, CompanyProfile, EmploymentDynamics, JudicialHealth, SectorBenchmark, RegionalEconomy, BNDESHistory, Compliance) rodando via asyncio.gather() com contexto compartilhado. Velocidade de um time de 50 com uma fração do headcount.",
     rustTitle: "Rust para Segurança",
     rustDesc:
       "Rust para performance e memory safety a nível de sistemas. Combinado com agentes de IA para velocidade — o melhor dos dois mundos.",
     pipelineTitle: "Pipeline Completo",
     pipelineDesc:
-      "De prompt engineering a deploy em produção. Orquestração Claude/GPT, Cursor IDE, code review automatizado, CI/CD integrado.",
+      "Orquestração customizada sem frameworks — asyncio.gather() puro com shared context pattern, sem LangChain nem CrewAI. WhatsApp-first com reconhecimento de voz, Gemini pra pricing, GPT-4 pra conversação, mapeamento dor-pra-produto por profissão e InterpretationEngine traduzindo métricas técnicas pra linguagem simples.",
   },
 
   // ── Footer ──────────────────────────────────────────────────────────
