@@ -1,4 +1,4 @@
-import { Terminal, Github, Linkedin, Mail } from "lucide-react";
+import { Terminal, Github, Linkedin, Mail, Briefcase } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const companies = [
@@ -57,7 +57,7 @@ export default function FooterSection() {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com/in/andreluizsilva"
+              href="https://linkedin.com/in/bahuan"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -71,6 +71,15 @@ export default function FooterSection() {
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
+            </a>
+            <a
+              href="https://www.upwork.com/freelancers/~01af47aeae5059545d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Upwork"
+            >
+              <Briefcase className="h-5 w-5" />
             </a>
           </div>
         </div>

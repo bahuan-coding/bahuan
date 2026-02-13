@@ -52,7 +52,7 @@ export const en = {
         period: "2012 - 2016",
         title: "The Quant Trader Era",
         summary:
-          "Quant development at DLM Invista (now Inter Asset / Banco Inter) followed by proprietary trading at Infestus Capital in PnL-sharing partnership with Infinity Asset Management. C++ blackbox systems on colocated servers at B3, plus 15+ forex pairs automated via MQL5/MetaTrader on the SaxoBank platform.",
+          "Quant development at DLM Invista (now Inter Asset / Banco Inter) followed by proprietary trading at Infestus Capital in PnL-sharing partnership with Infinity Asset Management. C++ black-box systems on colocated servers at B3, plus 15+ forex pairs automated via MQL5/MetaTrader on the SaxoBank platform.",
         metric: "Microsecond execution",
       },
       {
@@ -261,6 +261,7 @@ export const en = {
   footer: {
     location: "São Paulo, Brazil",
     remote: "Remote Available",
+    hireMe: "Hire Me on Upwork",
   },
 };
 

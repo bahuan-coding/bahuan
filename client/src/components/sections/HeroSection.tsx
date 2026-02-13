@@ -151,10 +151,15 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           {/* Left — Text (3 cols) */}
           <div className="lg:col-span-3 space-y-6">
-            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-mono text-primary">
+            <a
+              href="https://www.upwork.com/freelancers/~01af47aeae5059545d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-mono text-primary hover:bg-primary/10 hover:border-primary/40 transition-colors"
+            >
               <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse" />
               {t.hero.badge}
-            </div>
+            </a>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-mono">
               {t.hero.title1} <br />

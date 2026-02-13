@@ -262,5 +262,6 @@ export const pt: Translations = {
   footer: {
     location: "São Paulo, Brasil",
     remote: "Disponível Remoto",
+    hireMe: "Me Contrate na Upwork",
   },
 };
