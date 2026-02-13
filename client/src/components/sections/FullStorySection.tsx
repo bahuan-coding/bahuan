@@ -12,8 +12,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const icons = [Zap, TrendingUp, CreditCard, Globe, ArrowRight];
-const numbers = ["01", "02", "03", "04", "05"];
+const icons = [Zap, TrendingUp, CreditCard, Globe, ArrowRight, Zap];
+const numbers = ["01", "02", "03", "04", "05", "06"];
 
 export default function FullStorySection() {
   const sectionRef = useScrollReveal<HTMLElement>();
