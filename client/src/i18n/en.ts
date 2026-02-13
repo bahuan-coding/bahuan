@@ -165,7 +165,7 @@ export const en = {
       {
         id: "infestus-infinity",
         summary:
-          "Proprietary trader operating from colocated servers inside B3's data center (Equinix SP4) through a PnL-sharing partnership with Infinity Asset Management — a common prop trading arrangement where the trader builds and runs algorithmic strategies using the partner firm's infrastructure, licenses, and capital, splitting profits based on performance. Developed HFT systems in C++ and Prolog for microsecond execution, while also building DI Futures algorithmic arbitrage systems for risk-free interest rate capture. Additionally automated 15+ forex pairs via MQL5 Expert Advisors on MetaTrader using the SaxoBank (Denmark) multi-asset platform.",
+          "Proprietary trader in PnL-sharing partnership with Infinity Asset Management, running HFT systems in C++ and Prolog on colocated servers at B3 (Equinix SP4). Built DI Futures algorithmic arbitrage and automated 15+ forex pairs via MQL5/MetaTrader on the SaxoBank platform.",
         metrics: ["Microsecond execution", "PnL-sharing partnership", "15+ forex pairs automated", "DI Futures algorithmic arbitrage"],
       },
       {

@@ -166,7 +166,7 @@ export const pt: Translations = {
       {
         id: "infestus-infinity",
         summary:
-          "Trader proprietário operando a partir de servidores colocados no datacenter da B3 (Equinix SP4) em parceria de divisão de P&L com a Infinity Asset Management — modelo clássico de prop trading onde o trader desenvolve e opera estratégias algorítmicas usando a infraestrutura, licenças e capital do parceiro, dividindo lucros por performance. Desenvolveu sistemas HFT em C++ e Prolog para execução em microssegundos, além de sistemas de arbitragem algorítmica de DI Futuro para captura de taxas livres de risco. Automatizou 15+ pares de forex via Expert Advisors em MQL5 no MetaTrader usando a plataforma multi-ativos SaxoBank (Dinamarca).",
+          "Trader proprietário em parceria de divisão de P&L com a Infinity Asset Management, operando sistemas HFT em C++ e Prolog colocados na B3 (Equinix SP4). Construiu arbitragem algorítmica de DI Futuro e automatizou 15+ pares de forex via MQL5/MetaTrader na plataforma SaxoBank.",
         metrics: ["Execução em microssegundos", "Parceria de divisão de P&L", "15+ pares forex automatizados", "Arbitragem algorítmica de DI Futuro"],
       },
       {
