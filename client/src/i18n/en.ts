@@ -76,6 +76,13 @@ export const en = {
           "Led transformation into a Payment Orchestration Platform. Pioneered Agent Engineering — AI swarms achieving 70% faster delivery with a lean team.",
         metric: "70% faster time-to-market",
       },
+      {
+        period: "2025 - Present",
+        title: "Quant Backtester: Full Circle",
+        summary:
+          "Built an institutional-grade backtesting engine in Rust — 17 crates, 28K LOC. Genetic algorithm strategy discovery (NSGA-II), SIMD-accelerated metrics (AVX-512), 93x speedup. The HFT discipline, now applied to systematic strategy research.",
+        metric: "93x speedup, 17 Rust crates",
+      },
     ],
     // Dialog full story content (HTML-like) — kept as strings for JSX
     chapter1Title: "The High-Frequency Foundation",
@@ -113,6 +120,13 @@ export const en = {
       'As CTO of a55 Payments, I took on a hands-on role to build a system capable of <strong>Smart Routing</strong> transactions across multiple providers, <strong>Acquirer Aggregation</strong> for optimal fee optimization, complex <strong>Split Payments</strong> for marketplace disbursement, and full <strong>PCI-DSS</strong> compliance for secure card data handling. We turned our internal payment processing capabilities into a standalone, revenue-generating powerhouse.',
     chapter5P3:
       'To achieve this with a leaner team, I pioneered a new methodology: <strong>Agent Engineering</strong>. I now orchestrate swarms of AI agents to handle everything from code generation to automated auditing. This <strong>"Vibe Coding"</strong> approach, combined with <strong>Rust</strong> for systems-level performance and safety, allows us to maintain the velocity of a 50-person team with a fraction of the headcount, achieving a <strong>70% reduction in time-to-market</strong> while maintaining enterprise-grade reliability. The future isn\'t about hiring more engineers—it\'s about augmenting the ones you have with intelligence.',
+    chapter6Title: "Full Circle: The Quant Backtester",
+    chapter6P1:
+      'In 2025, everything came full circle. I channeled 17 years of quantitative trading experience into building an <strong>institutional-grade backtesting engine</strong> in Rust — a 17-crate workspace spanning 28,000 lines of code. The system features a <strong>UnifiedEngine</strong> with fixed-point arithmetic (i64 with 6 decimal places), dual-price bars for anti-double-count validation, and a zero-allocation hot path that achieves a <strong>93x speedup</strong> over standard implementations via Structure-of-Arrays (SoA) layout and SIMD vectorization.',
+    chapter6P2:
+      'The crown jewel is the <strong>Strategy Combiner (SCG)</strong> — a Generative Combiner System that uses <strong>genetic algorithms</strong> to autonomously discover trading strategies. It employs <strong>NSGA-II Pareto ranking</strong> for multi-objective optimization (CAGR, Sharpe, Max Drawdown), a two-stage validation pipeline (Stage A fast screening with SIMD batch evaluation, Stage B full validation with Walk-Forward Analysis, PBO, and DSR anti-overfitting gates), and a Hall of Fame for elite strategy promotion. Population fitness is computed using <strong>AVX-512</strong> instructions (f64x8 via the <code>wide</code> crate) for maximum throughput.',
+    chapter6P3:
+      'The system includes a <strong>Tauri desktop dashboard</strong> with 17 pages — evolution monitor, Pareto Frontier 3D visualization, backtest drilldown, risk analytics (VaR/CVaR), Monte Carlo simulation, and a Miner Control panel for the OMP (Perpetual Mining Orchestrator) that runs 24/7. Storage is handled by <strong>OBFS</strong> — a custom binary format using Parquet columnar storage with Zstd compression and LMDB metadata, achieving 7.1x compression at just 8 KB per strategy. This project represents the synthesis of my entire career: HFT-grade performance engineering applied to systematic strategy research, built with the same institutional rigor I learned on the trading floor.',
   },
 
   // ── Career Timeline ──────────────────────────────────────────────────
@@ -124,6 +138,12 @@ export const en = {
     keyMetrics: "Key Metrics",
     present: "Present",
     entries: [
+      {
+        id: "quant-backtester",
+        summary:
+          "Built an institutional-grade backtesting engine in Rust (17 crates, 28K LOC). Genetic algorithm strategy discovery with NSGA-II Pareto ranking, SIMD-accelerated metrics via AVX-512, 93x speedup. Tauri desktop dashboard with 17 pages.",
+        metrics: ["93x speedup (SoA + SIMD)", "17 Rust crates, 28K LOC", "Genetic Algorithm (NSGA-II)", "AVX-512 vectorization"],
+      },
       {
         id: "a55-payments",
         summary:

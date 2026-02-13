@@ -78,6 +78,13 @@ export const pt: Translations = {
           "Liderou a transformação em Plataforma de Orquestração de Pagamentos. Pioneiro em Agent Engineering — IA acelerando entregas em 70% com time enxuto.",
         metric: "70% mais rápido no time-to-market",
       },
+      {
+        period: "2025 - Presente",
+        title: "Quant Backtester: O Ciclo se Fecha",
+        summary:
+          "Construiu um backtester institucional em Rust — 17 crates, 28K LOC. Descoberta evolutiva de estratégias (NSGA-II), métricas SIMD (AVX-512), speedup de 93x. A disciplina de HFT agora aplicada à pesquisa sistemática de estratégias.",
+        metric: "93x speedup, 17 crates Rust",
+      },
     ],
     chapter1Title: "A Base no Pregão Eletrônico",
     chapter1P1:
@@ -114,6 +121,13 @@ export const pt: Translations = {
       'Como CTO da a55 Payments, coloquei a mão na massa para construir um sistema com <strong>Smart Routing</strong> entre múltiplos provedores, <strong>Agregação de Adquirentes</strong> para otimização de taxas, <strong>Split Payments</strong> complexos para disbursement de marketplace e compliance total com <strong>PCI-DSS</strong> para tratamento seguro de dados de cartão. Transformamos nossas capacidades internas em um produto standalone gerador de receita.',
     chapter5P3:
       'Para entregar isso com um time mais enxuto, criei uma nova metodologia: <strong>Agent Engineering</strong>. Hoje orquestro swarms de agentes de IA para lidar com tudo — de geração de código a auditoria automatizada. Essa abordagem de <strong>"Vibe Coding"</strong>, combinada com <strong>Rust</strong> para performance e segurança a nível de sistemas, nos permite manter a velocidade de um time de 50 pessoas com uma fração do headcount, alcançando <strong>70% de redução no time-to-market</strong> com confiabilidade enterprise-grade. O futuro não é sobre contratar mais engenheiros — é sobre multiplicar os que você tem com inteligência.',
+    chapter6Title: "O Ciclo se Fecha: Quant Backtester",
+    chapter6P1:
+      'Em 2025, tudo se conectou. Canalizei 17 anos de experiência em trading quantitativo para construir um <strong>backtester de nível institucional</strong> em Rust — um workspace de 17 crates com 28 mil linhas de código. O sistema tem um <strong>UnifiedEngine</strong> com aritmética de ponto fixo (i64 com 6 casas decimais), barras dual-price para validação anti-double-count, e um hot path zero-alocação que atinge <strong>speedup de 93x</strong> sobre implementações padrão via layout Structure-of-Arrays (SoA) e vetorização SIMD.',
+    chapter6P2:
+      'A peça central é o <strong>Strategy Combiner (SCG)</strong> — um Sistema Combinador Generativo que usa <strong>algoritmos genéticos</strong> para descobrir estratégias de trading de forma autônoma. Utiliza <strong>NSGA-II Pareto ranking</strong> para otimização multi-objetivo (CAGR, Sharpe, Max Drawdown), pipeline de validação em dois estágios (Stage A screening rápido com avaliação SIMD em batch, Stage B validação completa com Walk-Forward Analysis, PBO e DSR como gates anti-overfitting), e um Hall of Fame para promoção de estratégias elite. O fitness da população é computado com instruções <strong>AVX-512</strong> (f64x8 via crate <code>wide</code>) para throughput máximo.',
+    chapter6P3:
+      'O sistema inclui um <strong>dashboard desktop Tauri</strong> com 17 páginas — monitor de evolução, visualização 3D da Fronteira de Pareto, drilldown de backtest, analytics de risco (VaR/CVaR), simulação Monte Carlo, e painel de controle do OMP (Orquestrador de Mineração Perpétua) que roda 24/7. O armazenamento é feito pelo <strong>OBFS</strong> — formato binário customizado usando Parquet columnar com compressão Zstd e metadata LMDB, atingindo 7,1x de compressão com apenas 8 KB por estratégia. Este projeto é a síntese de toda minha carreira: engenharia de performance de nível HFT aplicada à pesquisa sistemática de estratégias, construída com o mesmo rigor institucional que aprendi no pregão.',
   },
 
   // ── Career Timeline ──────────────────────────────────────────────────
@@ -125,6 +139,12 @@ export const pt: Translations = {
     keyMetrics: "Resultados",
     present: "Atual",
     entries: [
+      {
+        id: "quant-backtester",
+        summary:
+          "Construiu backtester institucional em Rust (17 crates, 28K LOC). Descoberta evolutiva de estratégias com NSGA-II Pareto, métricas SIMD via AVX-512, speedup de 93x. Dashboard desktop Tauri com 17 páginas.",
+        metrics: ["Speedup de 93x (SoA + SIMD)", "17 crates Rust, 28K LOC", "Algoritmo Genético (NSGA-II)", "Vetorização AVX-512"],
+      },
       {
         id: "a55-payments",
         summary:
