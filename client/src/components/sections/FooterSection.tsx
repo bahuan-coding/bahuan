@@ -48,7 +48,7 @@ export default function FooterSection() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/bahuan"
+              href="https://github.com/bahuan-coding"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
