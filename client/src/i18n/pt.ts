@@ -75,8 +75,8 @@ export const pt: Translations = {
         period: "2024 - Presente",
         title: "O Pivot: a55 Payments",
         summary:
-          "Liderou a transformação em Plataforma de Orquestração de Pagamentos. Pioneiro em Agent Engineering — IA acelerando entregas em 70% com time enxuto.",
-        metric: "70% mais rápido no time-to-market",
+          "Liderou a transformação em Plataforma de Orquestração de Pagamentos enterprise — conectividade direta Visa/Mastercard, roteamento inteligente, split-payments e cobertura de 40+ mercados. Orquestração de agentes de IA como metodologia de engenharia para entregar infraestrutura de pagamentos com a velocidade de um time de 50 usando um squad enxuto.",
+        metric: "40+ mercados, PCI-DSS L1",
       },
       {
         period: "2025 - Presente",
@@ -116,11 +116,11 @@ export const pt: Translations = {
       'Escalei o time de engenharia de um pequeno squad para um departamento de <strong>110+ profissionais</strong> no Brasil e México. Captamos <strong>$44M USD</strong> em rodadas Series A e B, provando que a tecnologia escalava para demandas institucionais. A expansão para o <strong>México</strong> exigiu reconstruir módulos de compliance, adaptar modelos de crédito para regulação local e contratar e mentorar liderança de engenharia em um novo mercado. Mas o verdadeiro teste de liderança veio quando o mercado virou.',
     chapter5Title: "O Pivot: a55 Payments",
     chapter5P1:
-      'Quando a crise de crédito global apertou, não recuamos — executamos um pivot. Liderei a transformação da infraestrutura core em <strong>a55 Payments</strong>, uma <strong>Plataforma de Orquestração de Pagamentos</strong> robusta. Não era só um produto novo; era uma reinvenção completa do nosso DNA tecnológico.',
+      'Quando a crise de crédito global apertou, não recuamos — executamos um pivot. Liderei a transformação da infraestrutura core em <strong>a55 Payments</strong>, uma <strong>Plataforma de Orquestração de Pagamentos</strong> enterprise. Conectividade direta <strong>Visa/Mastercard</strong>, roteamento inteligente entre múltiplos adquirentes, <strong>split-payment para marketplaces</strong>, controles de <strong>3DS e anti-fraude</strong>, tokenização de cartões, verificação zero-auth e billing recorrente nativo — tudo sob compliance <strong>PCI-DSS Level 1</strong>. A plataforma atende <strong>40+ mercados</strong> com adquirência e liquidação local.',
     chapter5P2:
-      'Mas o pivot de pagamentos foi só metade da história. Em paralelo, mergulhei fundo em <strong>Agent Engineering</strong> — não só usando IA pra gerar código, mas arquitetando um <strong>sistema multi-agente de produção</strong> como projeto pessoal. Construí 30 Product Managers de IA especializados por profissão (advogado, médico, barbeiro, desenvolvedor e mais 26), cada um mapeando dores reais em produtos financeiros através de um <strong>PM Suite Coordinator</strong>. Junto deles, um <strong>StudyOrchestrator</strong> executa 8 agentes paralelos de análise de crédito — CreditScore, CompanyProfile, EmploymentDynamics, JudicialHealth, SectorBenchmark, RegionalEconomy, BNDESHistory e Compliance — todos rodando via <strong>asyncio.gather()</strong> com contexto compartilhado pra evitar buscas redundantes. Um <strong>InterpretationEngine</strong> traduz métricas técnicas em linguagem simples que qualquer pessoa entende.',
+      'O que viabilizou esse pivot em velocidade foi minha abordagem de <strong>engenharia aumentada por IA</strong>. Não uso IA só pra gerar código — arquiteto <strong>sistemas de orquestração multi-agente</strong> onde agentes autônomos executam workstreams em paralelo: geração de código em <strong>28 domínios DDD</strong>, auditoria de segurança automatizada pra compliance PCI, geração de testes e gerenciamento de pipelines de deploy. A orquestração roda em asyncio Python customizado — <strong>sem framework, sem LangChain, sem CrewAI</strong> — com padrões de contexto compartilhado que eliminam trabalho redundante entre agentes.',
     chapter5P3:
-      'Isso é o que eu chamo de Agent Engineering como filosofia completa — não é só vibe coding. É arquitetar sistemas onde agentes autônomos geram produtos, analisam crédito e tomam decisões. O sistema inteiro é <strong>WhatsApp-first</strong> com reconhecimento de voz, usa <strong>Gemini pra pricing dinâmico</strong> e <strong>GPT-4 pra fluxos conversacionais</strong>, e roda em orquestração customizada com asyncio puro — <strong>sem framework, sem LangChain, sem CrewAI</strong>. Cada um dos 8 study runners estende um <strong>BaseStudyRunner</strong> com sua própria lógica de coleta e interpretação, enquanto os PM agents fazem mapeamento de dor-pra-produto por profissão. Combinado com <strong>Rust</strong> nos caminhos críticos de performance, essa abordagem entrega a velocidade de um time de 50 com uma fração do headcount — <strong>70% de redução no time-to-market</strong> com confiabilidade enterprise-grade.',
+      'Isso é o que eu chamo de ser um <strong>Piloto de IA</strong> — não é uso de IA baseado em wrappers, mas orquestração de agentes de produção aplicada pra construir infraestrutura real de pagamentos. O resultado: <strong>ledger de partidas dobradas</strong>, <strong>75 migrações de banco em 28 domínios DDD</strong>, roteamento inteligente com fallback multi-provedor, deduplicação de webhooks, engine de reconciliação e gestão de chargebacks — tudo entregue com a velocidade de um time de 50 usando um squad enxuto. Combinado com <strong>Rust</strong> nos caminhos críticos como a engine de reconciliação, essa abordagem entregou <strong>70% de redução no time-to-market</strong> mantendo confiabilidade enterprise-grade.',
     chapter6Title: "O Ciclo se Fecha: Quant Backtester",
     chapter6P1:
       'Em 2025, tudo se conectou. Canalizei 17 anos de experiência em trading quantitativo para construir um <strong>backtester de nível institucional</strong> em Rust — um workspace de 17 crates com 28 mil linhas de código. O sistema tem um <strong>UnifiedEngine</strong> com aritmética de ponto fixo (i64 com 6 casas decimais), barras dual-price para validação anti-double-count, e um hot path zero-alocação que atinge <strong>speedup de 93x</strong> sobre implementações padrão via layout Structure-of-Arrays (SoA) e vetorização SIMD.',
@@ -148,8 +148,8 @@ export const pt: Translations = {
       {
         id: "a55-payments",
         summary:
-          "Liderando o pivot de crédito para orquestração de pagamentos. Gestão hands-on aplicando metodologia Agent Engineering para acelerar entregas enterprise-grade com time enxuto.",
-        metrics: ["70% mais rápido no time-to-market", "Pioneiro em Agent Engineering", "PCI-DSS Level 1"],
+          "Liderou o pivot de crédito para orquestração de pagamentos enterprise — conectividade direta com bandeiras, roteamento inteligente, split-payments, controles 3DS/AF e cobertura de 40+ mercados. Orquestração de agentes de IA como metodologia de engenharia para entregar infraestrutura de pagamentos em velocidade de startup.",
+        metrics: ["40+ mercados", "PCI-DSS Level 1", "70% mais rápido", "Visa/Mastercard direto"],
       },
       {
         id: "a55-credit",
@@ -218,6 +218,12 @@ export const pt: Translations = {
     title: "O Lado Humano",
     p1: 'Nascido em <strong>Maceió</strong> e criado em <strong>Salvador</strong>, carrego o espírito de dois estados nordestinos — Alagoas me deu o começo, a Bahia moldou quem eu sou. Me considero com orgulho <strong>Alagoano</strong> e <strong>Baiano</strong>, com o calor e a personalidade forte que é marca registrada de um <strong>Nordestino</strong>. Amo meu time, <strong>Esporte Clube Bahia</strong>, e trago essa mesma paixão e lealdade inabalável pro meu trabalho e pras pessoas com quem construo junto.',
     p2: 'Quando não estou arquitetando sistemas financeiros, me encontra nas lanes do <strong>Dota 2</strong>. Gaming mantém meu raciocínio estratégico afiado e meus reflexos mais rápidos que um algoritmo de HFT. Os paralelos entre coordenar uma team fight de cinco e orquestrar um deploy de sistemas distribuídos são mais reais do que a maioria das pessoas imagina.',
+    videosTitle: "Me Veja Apresentando",
+    videos: [
+      { title: "Soluções financeiras para a logística na Gig Economy" },
+      { title: "Simplificar o acesso ao crédito e fluxo de caixa" },
+      { title: "Expansão global e soluções de pagamento" },
+    ],
   },
 
   // ── How I Work (Leadership) ─────────────────────────────────────────
@@ -246,16 +252,16 @@ export const pt: Translations = {
     aiQuote: '"Não só escrevo código — eu orquestro inteligência."',
     agentTitle: "Orquestração de Agentes",
     agentDesc:
-      "Swarms de agentes de IA — de 30 Product Managers por profissão que mapeiam dores em produtos, a 8 agentes paralelos de análise de crédito com contexto compartilhado. Geração de código, testes automatizados, auditoria de segurança e deploy — tudo coordenado por um arquiteto humano.",
+      "Sistemas multi-agente onde agentes autônomos de IA executam workstreams de engenharia em paralelo — geração de código em domínios DDD, auditoria automatizada de segurança pra compliance PCI, geração de testes e pipelines de deploy. Tudo coordenado por um arquiteto que entende tanto pagamentos quanto IA.",
     fasterTitle: "70% Mais Rápido",
     fasterDesc:
-      "Não é teoria — testado em produção com 30 PM agents por profissão mapeando dores reais em produtos, e 8 agentes paralelos de crédito (CreditScore, CompanyProfile, EmploymentDynamics, JudicialHealth, SectorBenchmark, RegionalEconomy, BNDESHistory, Compliance) rodando via asyncio.gather() com contexto compartilhado. Velocidade de um time de 50 com uma fração do headcount.",
+      "Não é teoria — testado em produção construindo uma plataforma de orquestração de pagamentos enterprise. Agentes de IA executando workstreams paralelos em 28 domínios DDD, 75 migrações de banco, lógica de roteamento inteligente e engines de reconciliação. Velocidade de um time de 50 com um squad enxuto.",
     rustTitle: "Rust para Segurança",
     rustDesc:
-      "Rust para performance e memory safety a nível de sistemas. Combinado com agentes de IA para velocidade — o melhor dos dois mundos.",
+      "Rust para performance e memory safety em caminhos críticos de pagamentos como reconciliação e processamento de liquidação. Combinado com agentes de IA para velocidade — o melhor dos dois mundos.",
     pipelineTitle: "Pipeline Completo",
     pipelineDesc:
-      "Orquestração customizada sem frameworks — asyncio.gather() puro com shared context pattern, sem LangChain nem CrewAI. WhatsApp-first com reconhecimento de voz, Gemini pra pricing, GPT-4 pra conversação, mapeamento dor-pra-produto por profissão e InterpretationEngine traduzindo métricas técnicas pra linguagem simples.",
+      "Orquestração customizada de IA sem frameworks — asyncio.gather() puro com shared context pattern, sem LangChain nem CrewAI. Gemini e GPT-4 para especializações diferentes de agentes, execução paralela com deduplicação e camada de interpretação que traduz lógica complexa de domínio de pagamentos em tarefas de engenharia acionáveis.",
   },
 
   // ── Footer ──────────────────────────────────────────────────────────

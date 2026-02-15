@@ -73,8 +73,8 @@ export const en = {
         period: "2024 - Present",
         title: "The Strategic Pivot: a55 Payments",
         summary:
-          "Led transformation into a Payment Orchestration Platform. Pioneered Agent Engineering — AI swarms achieving 70% faster delivery with a lean team.",
-        metric: "70% faster time-to-market",
+          "Led transformation into an enterprise Payment Orchestration Platform — direct Visa/Mastercard connectivity, intelligent routing, split-payments, and 40+ market coverage. Applied AI agent orchestration as the engineering methodology to ship payment infrastructure at the velocity of a 50-person team with a lean squad.",
+        metric: "40+ markets, PCI-DSS L1",
       },
       {
         period: "2025 - Present",
@@ -115,11 +115,11 @@ export const en = {
       'I led the engineering team from a small squad to a department of <strong>110+ professionals</strong> across Brazil and Mexico. We raised <strong>$44M USD</strong> in Series A and B rounds, proving that our technology could scale to meet the demands of institutional investors. The expansion to <strong>Mexico</strong> required rebuilding compliance modules, adapting credit models to local regulations, and hiring and mentoring engineering leadership in a new market. But the true test of leadership came when the market shifted.',
     chapter5Title: "The Strategic Pivot: a55 Payments",
     chapter5P1:
-      'When the global credit crunch hit, we didn\'t fold; we executed a masterful pivot. I led the transformation of our core infrastructure into <strong>a55 Payments</strong>, a robust <strong>Payment Orchestration Platform</strong>. This wasn\'t just a new product; it was a complete reinvention of our technological DNA.',
+      'When the global credit crunch hit, we didn\'t fold; we executed a masterful pivot. I led the transformation of our core infrastructure into <strong>a55 Payments</strong>, an enterprise <strong>Payment Orchestration Platform</strong>. Direct <strong>Visa/Mastercard</strong> connectivity, intelligent routing across multiple acquirers, <strong>split-payment orchestration</strong> for marketplaces, <strong>3DS & anti-fraud</strong> controls, card tokenization, zero-auth verification, and native recurring/subscription billing — all under <strong>PCI-DSS Level 1</strong> compliance. The platform now serves <strong>40+ markets</strong> with local acquiring and settlement.',
     chapter5P2:
-      'But the payments pivot was only half the story. In parallel, I went deep into <strong>Agent Engineering</strong> — not just using AI for code generation, but architecting a full production-grade <strong>multi-agent system</strong> as a personal project. I built 30 profession-specific AI Product Managers (lawyer, doctor, barber, developer, and 26 others), each one mapping real pain points to financial products through a <strong>PM Suite Coordinator</strong>. Alongside them, a <strong>StudyOrchestrator</strong> runs 8 parallel credit analysis agents — CreditScore, CompanyProfile, EmploymentDynamics, JudicialHealth, SectorBenchmark, RegionalEconomy, BNDESHistory, and Compliance — all executing via <strong>asyncio.gather()</strong> with shared context to avoid redundant data fetches. An <strong>InterpretationEngine</strong> then translates raw metrics into plain-language insights that anyone can understand.',
+      'What made this pivot possible at speed was my approach to <strong>AI-augmented engineering</strong>. I don\'t just use AI to generate code — I architect <strong>multi-agent orchestration systems</strong> where autonomous AI agents handle parallel workstreams: code generation across <strong>28 DDD domains</strong>, automated security auditing for PCI compliance, test generation, and deployment pipeline management. The orchestration runs on custom Python asyncio — <strong>no frameworks, no LangChain, no CrewAI</strong> — with shared context patterns that prevent redundant work across agents.',
     chapter5P3:
-      'This is what I mean by Agent Engineering as a complete philosophy — it\'s not just vibe coding. It\'s about architecting systems where autonomous agents generate products, analyze credit, and make decisions. The entire system is <strong>WhatsApp-first</strong> with voice recognition, uses <strong>Gemini for dynamic pricing</strong> and <strong>GPT-4 for conversational flows</strong>, and runs on custom orchestration built with pure Python asyncio — <strong>no frameworks, no LangChain, no CrewAI</strong>. Each of the 8 study runners extends a <strong>BaseStudyRunner</strong> with its own data collection and interpretation logic, while the PM agents handle pain-point-to-product mapping per profession. Combined with <strong>Rust</strong> for performance-critical paths, this approach delivers the velocity of a 50-person team with a fraction of the headcount — a <strong>70% reduction in time-to-market</strong> with enterprise-grade reliability.',
+      'This is what I call being an <strong>AI Pilot</strong> — not wrapper-based AI usage, but production-grade agent orchestration applied to build real payment infrastructure. The result: a <strong>double-entry ledger</strong>, <strong>75 DB migrations across 28 DDD domains</strong>, smart routing with multi-provider fallback, webhook deduplication, reconciliation engine, and chargeback management — all shipped with the velocity of a 50-person team using a lean squad. Combined with <strong>Rust</strong> for performance-critical paths like the reconciliation engine, this approach delivered a <strong>70% reduction in time-to-market</strong> while maintaining enterprise-grade reliability.',
     chapter6Title: "Full Circle: The Quant Backtester",
     chapter6P1:
       'In 2025, everything came full circle. I channeled 17 years of quantitative trading experience into building an <strong>institutional-grade backtesting engine</strong> in Rust — a 17-crate workspace spanning 28,000 lines of code. The system features a <strong>UnifiedEngine</strong> with fixed-point arithmetic (i64 with 6 decimal places), dual-price bars for anti-double-count validation, and a zero-allocation hot path that achieves a <strong>93x speedup</strong> over standard implementations via Structure-of-Arrays (SoA) layout and SIMD vectorization.',
@@ -147,8 +147,8 @@ export const en = {
       {
         id: "a55-payments",
         summary:
-          "Leading the strategic pivot from credit to payment orchestration. Hands-on leadership applying Agent Engineering methodology to accelerate enterprise-grade delivery with a lean team.",
-        metrics: ["70% faster time-to-market", "Agent Engineering pioneer", "PCI-DSS Level 1"],
+          "Led the strategic pivot from credit to enterprise payment orchestration — direct card network connectivity, intelligent routing, split-payments, 3DS/AF controls, and 40+ market coverage. AI agent orchestration as engineering methodology to ship payment infrastructure at startup speed.",
+        metrics: ["40+ markets", "PCI-DSS Level 1", "70% faster time-to-market", "Direct Visa/Mastercard"],
       },
       {
         id: "a55-credit",
@@ -217,6 +217,12 @@ export const en = {
     title: "The Human Side",
     p1: 'Born in <strong>Maceió</strong> and raised in <strong>Salvador</strong>, I carry the spirit of two Northeastern states — Alagoas gave me my start, Bahia shaped who I am. I\'m proudly both <strong>Alagoano</strong> and <strong>Baiano</strong>, with the warmth and strong personality that comes with being a <strong>Nordestino</strong>. I love my team, <strong>Esporte Clube Bahia</strong>, and I bring that same passion and unwavering loyalty to my work and the people I build alongside.',
     p2: 'When I\'m not architecting financial systems, you can find me in the lanes of <strong>Dota 2</strong>. Gaming keeps my strategic thinking sharp and my reflexes quicker than a high-frequency trading algorithm. The parallels between coordinating a five-person team fight and orchestrating a distributed systems deployment are more real than most people think.',
+    videosTitle: "Watch Me Present",
+    videos: [
+      { title: "FinTech Solutions for Gig Economy Logistics" },
+      { title: "Simplifying Credit Access & Cash Flow" },
+      { title: "Global Payment Expansion with PaySecure" },
+    ],
   },
 
   // ── How I Work (Leadership) ─────────────────────────────────────────
@@ -245,16 +251,16 @@ export const en = {
     aiQuote: '"I don\'t just write code; I orchestrate intelligence."',
     agentTitle: "Agent Orchestration",
     agentDesc:
-      "Orchestrating swarms of AI agents — from 30 profession-specific Product Managers that map pain points to products, to 8 parallel credit analysis agents with shared context. Code generation, automated testing, security auditing, and deployment — all coordinated by a human architect.",
+      "Multi-agent systems where autonomous AI agents handle parallel engineering workstreams — code generation across DDD domains, automated security auditing for PCI compliance, test generation, and deployment pipelines. All coordinated by a human architect who understands both payments and AI.",
     fasterTitle: "70% Faster Delivery",
     fasterDesc:
-      "Not theoretical — battle-tested with 30 profession-specific PM agents mapping real pain points to products, and 8 parallel credit study agents (CreditScore, CompanyProfile, EmploymentDynamics, JudicialHealth, SectorBenchmark, RegionalEconomy, BNDESHistory, Compliance) running via asyncio.gather() with shared context. Velocity of a 50-person team with a fraction of the headcount.",
+      "Not theoretical — battle-tested building an enterprise payment orchestration platform. AI agents handling parallel workstreams across 28 DDD domains, 75 DB migrations, smart routing logic, and reconciliation engines. Velocity of a 50-person team with a lean squad.",
     rustTitle: "Rust for Safety",
     rustDesc:
-      "Leveraging Rust for systems-level performance and memory safety. Combined with AI agents for velocity — the best of both worlds.",
+      "Leveraging Rust for systems-level performance and memory safety in payment-critical paths like reconciliation and settlement processing. Combined with AI agents for velocity — the best of both worlds.",
     pipelineTitle: "Full Pipeline",
     pipelineDesc:
-      "Custom orchestration without frameworks — pure asyncio.gather() with shared context pattern, no LangChain or CrewAI. WhatsApp-first with voice recognition, Gemini for pricing, GPT-4 for conversation, pain-point-to-product mapping per profession, and InterpretationEngine translating technical metrics to plain language.",
+      "Custom AI orchestration without frameworks — pure asyncio.gather() with shared context pattern, no LangChain or CrewAI. Gemini and GPT-4 for different agent specializations, parallel execution with deduplication, and an interpretation layer that translates complex payment domain logic into actionable engineering tasks.",
   },
 
   // ── Footer ──────────────────────────────────────────────────────────

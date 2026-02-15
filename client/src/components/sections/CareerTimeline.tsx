@@ -36,8 +36,8 @@ const careerData: CareerEntry[] = [
     period: "2024",
     isCurrent: true,
     icon: <Zap className="size-4" />,
-    strategies: ["Smart Routing", "Acquirer Aggregation", "Split Payment Orchestration", "Reconciliation Engine", "Chargeback Management"],
-    techStack: ["Rust", "Python", "TypeScript", "Kubernetes", "AWS", "Terraform", "AI Agents", "PCI-DSS"],
+    strategies: ["Payment Orchestration", "Smart Routing", "Direct Card Network Connectivity", "Split Payments", "3DS & AF Controls", "Tokenization", "Recurring Billing", "Reconciliation Engine", "Chargeback Management"],
+    techStack: ["Rust", "Python", "TypeScript", "Kubernetes", "AWS", "Terraform", "AI Agent Orchestration", "PCI-DSS L1", "PostgreSQL", "Redis", "Kafka"],
   },
   {
     id: "a55-credit",
